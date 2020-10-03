@@ -1,0 +1,35 @@
+@mixin headings($from: 1, $to: 6) {
+  @for $i from $from to $to {
+      h#{$i} {
+          @content
+      }
+  }   
+  
+}
+
+@include headings( ) {
+    font-family: 'dm_serif_display';
+    src: url(../webroot/fonts/dm_serif_display_400.woff2),
+        url(../webroot/fonts/dm_serif_display_400.woff);
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+@mixin paragraphs-and-list {
+    font-family: 'dm_sans';
+    src: url(../webroot/fonts/dm_sans_400.woff2),
+         url(../webroot/fonts/dm_sans_400.woff);
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+@mixin bold-list {
+  font-family: 'dm_sans';
+  src: url(../webroot/fonts/dm_sans_700.woff2),
+       url(../webroot/fonts/dm_sans_700.woff);
+  font-style: normal;
+  font-weight: 700;
+}
+
